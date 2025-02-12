@@ -1,103 +1,226 @@
 <html lang="pt-BR">
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Imersao</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="./src/icons-imgs/styles/vars.css">
-    <link rel="stylesheet" href="./src/icons-imgs/styles/sidebar-footer.css">
-    <link rel="stylesheet" href="./src/icons-imgs/styles/main.css"
-
-    <!-- Links para trazer os ícones via CDN -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"/>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Imersao</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="./src/icons-imgs/styles/vars.css">
+  <link rel="stylesheet" href="./src/icons-imgs/styles/sidebar-footer.css">
+  <link rel="stylesheet" href="./src/icons-imgs/styles/main.css">
+  <link rel="stylesheet" href="./src/icons-imgs/styles/media-queries.css">
+  <!-- Links para trazer os ícones via CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" />
 
 </head>
 
 
 <body>
-    <div class="sidebar">
-      <nav class="sidebar__navigation"> 
-        <div class="logo">
-            <a href=""> 
-                <img src="./src/icons-imgs/icons/logo-spotify.png" alt="logo do spotify">
-            </a>
-        </div>        
-            <ul>
-                <li>
-                    <a href="">
-                        <span class="fa fa-home"></span>
-                        <span>Inicio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="fa fa-search"></span>
-                        <span>Buscar</span>
-                </li>
-            </ul>           
+  <div class="sidebar">
+    <nav class="sidebar__navigation">
+      <div class="logo">
+        <a href="">
+          <img src="./src/icons-imgs/icons/logo-spotify.png" alt="Logo" />
+        </a>
+      </div>
+      <ul>
+        <li>
+          <a href="">
+            <span class="fa fa-home"></span>
+            <span>Início</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="fa fa-search"></span>
+            <span>Buscar</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="library">
+      <div class="library__content">
+        <button class="library__button">
+          <span class="fa fas fa-book"></span>
+          <span>Sua biblioteca</span>
+        </button>
+        <span class="fa fas fa-plus">
+        </span>
+      </div>
+      <section class="section-playlist">
+        <div class="section-playlist__content">
+          <span class="text title">Crie sua primeira Playlist </span>
+          <span class="text subtitle">É facil, vamos te ajudar! </span>
+          <button class="section-playlist__button">
+            <span>Playlist</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="cookies">
+        <a href="">Cookies</a>
+      </div>
+
+      <div class="languages">
+        <button class="languages__button">
+          <span class="fa fan fa-globe"></span>
+          <span>Portugues do Bostil</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="main-container">
+      <nav class="header__navigation">
+        <div class="navigation">
+          <button class="arrow-left">
+            <img src="./src/icons-imgs/icons/small-left.png" alt="" />
+          </button>
+          <button class="arrow-right">
+            <img src="./src/icons-imgs/icons/small-right.png" alt="" />
+          </button>
+        </div>
+        <div class="header__search">
+          <img src="./src/assets/icons/search.png" alt="" />
+          <input id="search-input" maxlength="800" autocorrect="off" autocapitalize="off" spellcheck="false"
+            placeholder="Pesquisar: Deftones-Xerces" value="" />
+        </div>
+        <div class="header__login">
+          <button class="subscribe">Inscreva-se</button>
+          <button class="login">Entrar</button>
+        </div>
       </nav>
 
-      <div class="library">
-        <div class="library__content">
-          <button class="library__button">              
-            <span class="fa fas fa-book"></span>
-            <span>Sua biblioteca</span>
-          </button>
-            <span class="fa fas fa-plus">
-            </span>          
-        </div> 
-         <section class="section-playlist">
-            <div class="section-playlist__content">
-              <span class="text title">Crie sua primeira Playlist </span>
-              <span class="text subtitle">É facil, vamos te ajudar! </span>
-              <button class="section-playlist__button"> 
-                <span>Playlist</span>
-              </button>
-            </div>
-         </section>
- 
-         <div class="cookies">
-            <a href="">Cookies</a>
-         </div>
+      
 
-         <div class="languages">
-            <button class="languages__button">
-                <span class="fa fan fa-globe"></span>
-                <span>Portugues do Bostil</span>
-            </button>
-         </div>
-      </div>  
-    </div>
-    
-    <main>
-      <div class="main-container">
+      <div class="playlist-container">
+        <div id="result-playlists">
+         <div class="playlist">
+          <h1 id="greeting">Seja Bem-vindo</h1>
+          <h2 class="session">Navegue pelas seções</h2>
+         </div> 
+        <!--lista de itens-->
+        <div class="offer__scroll-playlists">
+          <div class="offer__list">
+            <section class="offer__list-item">
+              <!--card 1-->
+              <a href="" class="cards">
+                <div class="cards card1">
+                    <img src="src/icons-imgs/playlist/1.jpeg" alt=""/>
+                    <span>Boas Festas</span>
+                </div>
+              </a>
+               <!--card 2-->
+              <a href="" class="cards">
+                <div class="cards card2">
+                  <img src="src/icons-imgs/playlist/2.png"/>
+                  <span>Feitos para voce</span>
+                </div>
+              </a>
+               <!--card 3-->
+              <a href="" class="cards">
+                <div class="cards card3">
+                  <img src="src/icons-imgs/playlist/3.jpeg"/>
+                  <span>Lançamentos</span>
+                </div>
+              </a>
+               <!--card 4-->
+              <a href="" class="cards">
+                <div class="cards card4">
+                  <img src="src/icons-imgs/playlist/4.jpeg"/>
+                  <span>Creators</span>
+                </div>
+              </a>
+               <!--card 5-->
+              <a href="" class="cards">
+                <div class="cards card5">
+                   <img src="src/icons-imgs/playlist/5.jpeg"/>
+                   <span>Para Treinar</span>
+                </div>
+              </a>
+               <!--card 6-->
+              <a href="" class="cards">
+                <div class="cards card6">
+                  <img src="src/icons-imgs/playlist/6.jpeg" alt=""/>
+                  <span>Podcasts</span>
+                </div>
+              </a>
 
-        <nav class="header-navigation">
-          <div class="navigation">
-            <button class="arrow-left">
-                 <img src="./src/icons-imgs/icons/small-left.png" alt=""/>
-            </button>
-            <button class="arrow-right">
-              <img src="./src/icons-imgs/icons/small-right.png" alt=""/>
-         </button>
-          
-           <div class="header__search">
-            <img src="./src/icons-imgs/icons/search.png" alt="" />
-             <input id="search-input" type="text"  maxlength="200" autocorrect ="off" autocapitalize="off" spellcheck="false"
-             placeholder="Pesquisar: Deftones-Xerces" value=""/>
-           </div>
+              <a href="" class="cards">
+                <div class="cards card7">
+                  <img src="src/icons-imgs/playlist/7.jpeg" alt=""/>
+                  <span>Sertanejo</span>
+                </div>
+              </a>
+
+              <a href="" class="cards">
+                <div class="cards card8">
+                  <img src="src/icons-imgs/playlist/8.jpeg" alt=""/>
+                  <span>Samba e pagode</span>
+                </div>
+              </a>
+
+              <a href="" class="cards">
+                <div class="cards card9">
+                  <img src="src/icons-imgs/playlist/9.jpeg" alt=""/>
+                  <span>Lixo</span>
+                </div>
+              </a>
+
+              <a href="" class="cards">
+                <div class="cards card10">
+                  <img src="src/icons-imgs/playlist/10.jpeg" alt=""/>
+                  <span>MPB</span>
+                </div>
+              </a>
+
+              <a href="" class="cards">
+                <div class="cards card11">
+                  <img src="src/icons-imgs/playlist/11.jpeg" alt=""/>
+                  <span>Rock</span>
+                </div>
+              </a>
+
+              <a href="" class="cards">
+                <div class="cards card12">
+                  <img src="src/icons-imgs/playlist/12.jpeg" alt=""/>
+                  <span>HipHop</span>
+                </div>
+              </a>
+
+              <a href="" class="cards">
+                <div class="card card13">
+                  <img src="src/icons-imgs/playlist/13.jpeg" alt=""/>
+                  <span>Indie</span>
+                </div>
+              </a>
+
+              <a href="" class="cards">
+                <div class="cards card14">
+                  <img src="src/icons-imgs/playlist/14.jpeg" alt=""/>
+                  <span>Lo-fi</span>
+                </div>
+              </a>
+
+              <a href="" class="cards">
+                <div class="cards card15">
+                  <img src="src/icons-imgs/playlist/15.jpeg" alt=""/>
+                  <span>Musica latina</span>
+                </div>
+              </a>
+            </section>
           </div>
+         </div>
+        </div>
 
-          <div class="header-login">
-            <button class="subscribre">Inscreva-se</button>
-            <button class="login">Entrar</button>
-          </div>
-        </nav>
 
       </div>
 
-
+      <!--fecha a div que engloba a main-->
+    </div>
     </main>
 
 
