@@ -14,7 +14,7 @@
     padding: 16px;
     margin: 10px;
     border-radius: 8px;
-    background-color: #121212;
+    background-color: #d8bc66;
 }
 
 .header__navigation .navigation {
@@ -53,7 +53,7 @@
     width: 364px;
     height: 48px;
     margin-left: 8px;
-    background-color: #242424;
+    background-color: var(--text-base-cyber);
     border-radius: 500px;
     border: 1px solid transparent;
 }
@@ -77,7 +77,7 @@
 
 .header__login .subscribe {
     border: none;
-    color: #a7a7a7;
+    color: #838383;
     font-size: 16px;
     font-weight: 700;
     background-color: transparent;
@@ -87,7 +87,7 @@
 .header__login .login {
     width: 100px;
     height: 48px;
-    color: #000;
+    color: var(--text-base-cyber);
     font-size: 16px;
     font-weight: 700;
     border-radius: 40px;
@@ -99,7 +99,7 @@
   
   .header__login .subscribe:hover {
     transform: scale(1.04);
-    color: white
+    color: #f3e7c3
   }
   
   .header__login .login:hover {
@@ -110,11 +110,11 @@
 
 
 .playlist-container {
-    height: 68vh;
+    height: 80vh;
     padding-top: 16px;
     margin: 10px;
     border-radius: 10px;
-    background-color: #121212;    
+    background-color: #d8bc66;    
 }
 
 .playlist{
@@ -122,14 +122,15 @@
 }
 
 .playlist #greeting {
-    color: var(--text-base-light);
+    color: var(--text-base-cyber);
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 48px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .playlist .session {
-    color: var(--text-base-light);
+    color: var(--text-base-cyber);
     font-size: 24px;
     font-weight: 700;
 }
@@ -235,7 +236,7 @@
   .card15 {
     background: rgb(60, 30, 80);
   }
-  /* FIM COLOR CARDS */
+  /* FIM DOS COLOR CARDS */
   .offer__list-item img {
     position: absolute;
     right: 0;
